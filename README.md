@@ -27,9 +27,11 @@ allocation models.
 1. First pipeline feeding **importance- and confidence-weighted** article-level news observations
    into a PCA-HMM's emission process for macro regime detection (prior work uses sentiment as an
    exogenous regressor, or unweighted sentiment in direct predictors).
-2. Evaluation shifted from direction accuracy to **regime-timing economics**: transition lead
-   time, net-of-cost Sharpe, drawdown — across a strategy zoo (equity/bond switch,
-   probability-weighted allocation, mean-variance, risk parity, vol targeting).
+2. We test the regime model the way it's actually used in practice — plugged into **portfolio
+   allocation and actual trading strategies**, not just checked on classification accuracy.
+   That means transition lead time, net-of-cost Sharpe, and drawdown across a strategy zoo
+   (equity/bond switch, probability-weighted allocation, mean-variance, risk parity, vol
+   targeting).
 3. A **calibration study** of FinBERT confidence in the regime-detection context (does
    temperature-scaled confidence improve timing?).
 4. A portable, ablatable **news importance scoring framework** (outlet prior × topic type × novelty).
